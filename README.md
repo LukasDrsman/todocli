@@ -23,7 +23,7 @@ Commands:<br/>
 ## Configuration of PyTODOn
 
 Written in python.<br/><br/>
-To configure ('config.py'):
+Things to configure ('config.py'):
 ```
 unfinished = "insert_unchecked_symbol_here"
 finished = "insert_checked_symbol_here"
