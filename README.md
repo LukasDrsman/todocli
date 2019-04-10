@@ -19,6 +19,4 @@ Commands:
  delete      del
  uncheck     uc
  check       cc
-
-
 ```
