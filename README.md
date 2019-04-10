@@ -12,11 +12,11 @@ python3 main.py
 <br/>
 Commands:
 ```
- help        h
- new         n 
- read        r 
- show        s
- delete      del
- uncheck     uc
- check       cc
+help        h
+new         n
+read        r
+show        s
+delete      del
+uncheck     uc
+check       cc
 ```
