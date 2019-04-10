@@ -18,4 +18,16 @@ Commands:<br/>
  delete / del  - clears TODO list<br/>
  uncheck / uc  - unchecks TODO line<br/>
  check / cc  - checks TODO line<br/>
-
+<br>
+#Configuration
+Written in python.
+All configurations are stored in 'config.py'
+Things possible to configure: notes.txt path, help.txt path, look of unchecked and checked symbol;
+What to change: 
+```
+unfinished = "insert_unchecked_symbol_here"
+finished = "insert_checked_symbol_here"
+notes_path = "insert_notes_path_here"
+hlp_path = "insert_help_path_here"
+title = "insert_title_of_TODOlist_here"
+```
