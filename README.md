@@ -10,13 +10,12 @@ cd PyTODOn
 python3 main.py
 ```
 <br/>
-Commands:
-```
-help        h
-new         n
-read        r
-show        s
-delete      del
-uncheck     uc
-check       cc
-```
+Commands:<br/>
+ help        h        - shows this manual
+ new         n        - adds new TODO line
+ read        r        - prints all TODO lines
+ show        s        - clears screen and prints all TODO lines
+ delete      del      - clears TODO list
+ uncheck     uc       - unchecks TODO line
+ check       cc       - checks TODO line
+
