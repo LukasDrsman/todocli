@@ -11,11 +11,11 @@ python3 main.py
 ```
 <br/>
 Commands:<br/>
- help........h........- shows this manual <br/>
- new.........n........- adds new TODO line<br/>
- read........r........- prints all TODO lines<br/>
- show........s........- clears screen and prints all TODO lines<br/>
- delete......del......- clears TODO list<br/>
- uncheck.....uc.......- unchecks TODO line<br/>
- check.......cc.......- checks TODO line<br/>
+ help / h  - shows this manual <br/>
+ new / n  - adds new TODO line<br/>
+ read / r  - prints all TODO lines<br/>
+ show / s  - clears screen and prints all TODO lines<br/>
+ delete / del  - clears TODO list<br/>
+ uncheck / uc  - unchecks TODO line<br/>
+ check / cc  - checks TODO line<br/>
 
