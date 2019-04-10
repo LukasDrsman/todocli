@@ -9,3 +9,16 @@ git clone https://github.com/LukyIsHere/PyTODOn.git
 cd PyTODOn
 python3 main.py
 ```
+<br/>
+Commands:
+```
+ help        h
+ new         n 
+ read        r 
+ show        s
+ delete      del
+ uncheck     uc
+ check       cc
+
+
+```
