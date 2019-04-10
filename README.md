@@ -1,7 +1,7 @@
 # PyTODOn
 Simple, CLI based TODO list. Work in progress.<br/>
 <br/>
-# How to run and use
+## How to run and use
 To run this, you need: python3, linux or macOS (doesn't work on windows, wasn't tested on macOS) <br/> <br/>
 Download and run (using terminal): 
 ```
@@ -18,4 +18,16 @@ Commands:<br/>
  delete / del  - clears TODO list<br/>
  uncheck / uc  - unchecks TODO line<br/>
  check / cc  - checks TODO line<br/>
+<br>
 
+## Configuration of PyTODOn
+
+Written in python.<br/><br/>
+Things to configure ('config.py'):
+```
+unfinished = "insert_unchecked_symbol_here"
+finished = "insert_checked_symbol_here"
+notes_path = "insert_notes_path_here"
+hlp_path = "insert_help_path_here"
+title = "insert_title_of_TODOlist_here"
+```
