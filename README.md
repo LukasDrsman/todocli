@@ -20,11 +20,9 @@ Commands:<br/>
  check / cc  - checks TODO line<br/>
 <br>
 ## Configuration
-Written in python.<br/>
-All configurations are stored in 'config.py'<br/>
-Things possible to configure: notes.txt path, help.txt path, look of unchecked and checked symbol;<br/>
 
-What to change: 
+Written in python.<br/><br/>
+To configure (in ) n 'config.py'
 ```
 unfinished = "insert_unchecked_symbol_here"
 finished = "insert_checked_symbol_here"
