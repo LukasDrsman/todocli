@@ -19,10 +19,11 @@ Commands:<br/>
  uncheck / uc  - unchecks TODO line<br/>
  check / cc  - checks TODO line<br/>
 <br>
-## Configuration
+
+## Configuration of PyTODOn
 
 Written in python.<br/><br/>
-To configure (in ) n 'config.py'
+To configure ('config.py'):
 ```
 unfinished = "insert_unchecked_symbol_here"
 finished = "insert_checked_symbol_here"
