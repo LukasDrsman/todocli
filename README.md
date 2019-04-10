@@ -19,7 +19,7 @@ Commands:<br/>
  uncheck / uc  - unchecks TODO line<br/>
  check / cc  - checks TODO line<br/>
 <br>
-#Configuration
+# Configuration
 Written in python.
 All configurations are stored in 'config.py'
 Things possible to configure: notes.txt path, help.txt path, look of unchecked and checked symbol;
