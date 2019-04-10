@@ -1,7 +1,7 @@
 # PyTODOn
 Simple, CLI based TODO list. Work in progress.<br/>
 <br/>
-# How to run and use
+## How to run and use
 To run this, you need: python3, linux or macOS (doesn't work on windows, wasn't tested on macOS) <br/> <br/>
 Download and run (using terminal): 
 ```
@@ -19,10 +19,11 @@ Commands:<br/>
  uncheck / uc  - unchecks TODO line<br/>
  check / cc  - checks TODO line<br/>
 <br>
-# Configuration
-Written in python.
-All configurations are stored in 'config.py'
-Things possible to configure: notes.txt path, help.txt path, look of unchecked and checked symbol;
+## Configuration
+Written in python.<br/>
+All configurations are stored in 'config.py'<br/>
+Things possible to configure: notes.txt path, help.txt path, look of unchecked and checked symbol;<br/>
+
 What to change: 
 ```
 unfinished = "insert_unchecked_symbol_here"
