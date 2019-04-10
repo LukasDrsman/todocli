@@ -1,10 +1,10 @@
 import sys
 import os
+from config import *
+from os.path import expanduser
 
-unfinished = "□"
-finished = "■"
-path = "/home/lukas/python/notes/notes.txt"
-hlp = "/home/lukas/python/notes/help.txt"
+path = os.path.expanduser(notes_path)
+hlp = os.path.expanduser(hlp_path)
 
 def show():
     os.system('clear')
@@ -62,7 +62,7 @@ def delete():
         note.write("")
         note.close()
         todo = open(path, "w")
-        todo.write("TODO: \n")
+        todo.write(title + "\n")
         todo.close()
 
 def main():
