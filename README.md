@@ -11,7 +11,7 @@ python3 main.py
 ```
 <br/>
 Commands:<br/>
- help / h  - shows this manual <br/>
+ help / h  - shows manual <br/>
  new / n  - adds new TODO line<br/>
  read / r  - prints all TODO lines<br/>
  show / s  - clears screen and prints all TODO lines<br/>
