@@ -1,9 +1,9 @@
 # PyTODOn
-Simple, CLI based TODO list. Work in progress.<br/>
+Simple, CLI based TODO list, written in python.<br/>
 <br/>
 ## How to run and use
-To run this, you need: python3, linux or macOS (doesn't work on windows, wasn't tested on macOS) <br/> <br/>
-Download and run (using terminal): 
+To run this, you need: python3 os, os.path, sys, bash, linux or macOS (wasn't tested on macOS) <br/> <br/>
+Download and run (using terminal, in home dir): 
 ```
 git clone https://github.com/LukyIsHere/PyTODOn.git
 cd PyTODOn
