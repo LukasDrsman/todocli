@@ -5,7 +5,7 @@ Simple, CLI based TODO list, written in python.<br/>
 To run this, you need: python3 os, os.path, sys, bash, linux or macOS (wasn't tested on macOS) <br/> <br/>
 Download and run (using terminal, in home dir): 
 ```
-git clone https://github.com/LukyIsHere/PyTODOn.git
+git clone https://github.com/LukyIsHere/todocli
 cd PyTODOn
 python3 main.py
 ```
@@ -20,7 +20,7 @@ Commands:<br/>
  check / cc  - checks TODO line<br/>
 <br>
 
-## Configuration of PyTODOn
+## Configuration of todocli
 
 Written in python.<br/><br/>
 Things to configure ('config.py'):
