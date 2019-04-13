@@ -1,4 +1,4 @@
-# PyTODOn
+# todocli
 Simple, CLI based TODO list, written in python.<br/>
 <br/>
 ## How to run and use
