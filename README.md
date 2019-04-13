@@ -6,7 +6,7 @@ To run this, you need: python3 os, os.path, sys, bash, linux or macOS (wasn't te
 Download and run (using terminal, in home dir): 
 ```
 git clone https://github.com/LukyIsHere/todocli
-cd PyTODOn
+cd todocli
 python3 main.py
 ```
 <br/>
