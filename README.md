@@ -3,7 +3,7 @@ Simple, CLI based TODO list, written in python.<br/>
 <br/>
 ## Usage
 Required for running todocli: python3 os, os.path, sys, bash, linux or macOS (wasn't tested on macOS) <br/> <br/>
-Download and run (using terminal, in home-dir(~ or $HOME)): 
+Download and run (using terminal, in home-dir(~)): 
 ```
 git clone https://github.com/LukyIsHere/todocli
 cd todocli
