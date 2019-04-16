@@ -1,7 +1,7 @@
 # todocli
 Simple, CLI based TODO list, written in python.<br/>
 <br/>
-## How to run and use
+## Usage
 To run this, you need: python3 os, os.path, sys, bash, linux or macOS (wasn't tested on macOS) <br/> <br/>
 Download and run (using terminal, in home dir): 
 ```
@@ -20,7 +20,7 @@ Commands:<br/>
  check / cc  - checks TODO line<br/>
 <br>
 
-## Configuration of todocli
+## Configuration
 
 Written in python.<br/><br/>
 Things to configure ('config.py'):
