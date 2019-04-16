@@ -1,5 +1,5 @@
 unfinished = "□"
 finished = "■"
-notes_path = "~/PyTODOn/notes.txt"
-hlp_path = "~/PyTODOn/help.txt"
+notes_path = "~/todocli/notes.txt"
+hlp_path = "~/todocli/help.txt"
 title = "TODO"
