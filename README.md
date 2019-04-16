@@ -23,7 +23,7 @@ Commands:<br/>
 ## Configuration
 
 Written in python.<br/><br/>
-Basic configurations ['config.py']:
+Basic configurations ('config.py'):
 ```
 unfinished = "insert_unchecked_symbol_here"
 finished = "insert_checked_symbol_here"
