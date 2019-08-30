@@ -22,10 +22,6 @@ Commands:<br/>
 <br>
 
 ## Configuration
-
-Written in python.<br/><br/>
-Configurable presets ('config.py'):
-=======
 Basic configurations ('config.py'):
 
 ```
