@@ -24,11 +24,10 @@ Commands:<br/>
 ## Configuration
 
 Written in python.<br/><br/>
-<<<<<<< HEAD
 Configurable presets ('config.py'):
 =======
 Basic configurations ('config.py'):
->>>>>>> de7c73995f160bc109cc9de62b646197039884e1
+
 ```
 unfinished = "insert_unchecked_symbol_here"
 finished = "insert_checked_symbol_here"
