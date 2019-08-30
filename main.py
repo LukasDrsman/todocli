@@ -6,11 +6,13 @@ from os.path import expanduser
 path = os.path.expanduser(notes_path)
 hlp = os.path.expanduser(hlp_path)
 
+
 def show():
     os.system('clear')
     data = open(path, "r")
     print(data.read())
     data.close()
+
 
 def replace_line(file_name, line_num, text):
     lines = open(file_name, 'r').readlines()
@@ -19,7 +21,9 @@ def replace_line(file_name, line_num, text):
     out.writelines(lines)
     out.close()
 
-def check(ln):
+
+def check(a):
+    ln = int(a)
     f = open(path, "r")
     lines = f.readlines()
     f.close()
@@ -31,7 +35,9 @@ def check(ln):
     print(prntable)
     replace_line(path, ln, prntable)
 
-def uncheck(x):
+
+def uncheck(y):
+    x = int(y)
     f = open(path, "r")
     lines = f.readlines()
     f.close()
@@ -43,20 +49,22 @@ def uncheck(x):
     print(prntable1)
     replace_line(path, x, prntable1)
 
+
 def readall():
     data = open(path, "r")
     print(data.read())
     data.close()
 
-def new():
+
+def new(newin):
     notes = open(path, "a")
-    newin = input(">> ")
     newnote = " "+unfinished+" "+newin
     notes.write(newnote+"\n")
     notes.close()
 
+
 def delete():
-    yon = input("Do you want to delete current TODO list? ([y]es or [n]o)")
+    yon = input("Do you want to delete current TODO list? ([y]es or [n]o) ")
     if (yon == "y" or yon == "Y" or yon == "yes"):
         note = open(path, "w")
         note.write("")
@@ -65,30 +73,33 @@ def delete():
         todo.write(title + "\n")
         todo.close()
 
-def main():
-    while (1):
-        inputsh = input("- ")
-        if (inputsh == "show" or inputsh == "s"):
-            show()
-        if (inputsh == "new" or inputsh == "n"):
-            new()
-        if (inputsh == "exit" or inputsh == "q"):
-            exit()
-        if (inputsh == "delete" or inputsh == "del"):
-            delete()
-        if (inputsh == "read" or inputsh == "r"):
-            readall()
-        if (inputsh == "help" or inputsh == "h"):
-            os.system('clear')
-            help = open(hlp, "r")
-            print(help.read())
-            help.close()
-        if (inputsh == "check" or inputsh == "cc"):
-            choose = int(input(">> "))
-            if (choose >= 1):
-                check(choose)
-        if (inputsh == "uncheck" or inputsh == "uc"):
-            unchoose = int(input(">> "))
-            if (unchoose >= 1):
-                uncheck(unchoose)
-main()
+
+def read_help():
+    pathto = open(hlp, "r")
+    print(pathto.read())
+    pathto.close()
+
+
+while (1):
+    usrInput = input("~ ")
+    if (" " in usrInput):
+        command, parameter = usrInput.split(' ')
+    else:
+        command = usrInput
+        parameter = ""
+    if (command == "new" or command == "n"):
+        new(parameter)
+    if (command == "check" or command == "cc"):
+        check(parameter)
+    if (command == "uncheck" or command == "uc"):
+        uncheck(parameter)
+    if (command == "quit" or command == "q"):
+        exit()
+    if (command == "delete" or command == "del"):
+        delete()
+    if (command == "read" or command == "r"):
+        readall()
+    if (command == "show" or command == "s"):
+        show()
+    if (command == "help" or command == "h"):
+        read_help()

@@ -18,12 +18,13 @@ Commands:<br/>
  delete / del  - clears TODO list<br/>
  uncheck / uc  - unchecks TODO line<br/>
  check / cc  - checks TODO line<br/>
+ quit / q  - exits program<br/>
 <br>
 
 ## Configuration of todocli
 
 Written in python.<br/><br/>
-Things to configure ('config.py'):
+Configurable presets ('config.py'):
 ```
 unfinished = "insert_unchecked_symbol_here"
 finished = "insert_checked_symbol_here"
@@ -31,3 +32,12 @@ notes_path = "insert_notes_path_here"
 hlp_path = "insert_help_path_here"
 title = "insert_title_of_TODOlist_here"
 ```
+<br/>
+
+## Things to be done
+* single-line deletion
+* further configuration options
+* more efficient code
+* cleaner code
+* marking options for sepcial items
+

@@ -1,5 +1,5 @@
 ╔═══════════════════════════════╗
-║ PyTODOn v0.0.1 - usage manual ║
+║ todocli v0.0.2 - usage manual ║
 ╚═══════════════════════════════╝
 
  help        h        - shows this manual
