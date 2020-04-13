@@ -1,6 +1,11 @@
 #!/usr/bin/python3
 from functions import *
 
+if(os.path.isfile(path) != True):
+    notes = open(path, "w")
+    notes.write(title + "\n")
+    notes.close()
+
 show()
 
 while (1):

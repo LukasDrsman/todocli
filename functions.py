@@ -1,9 +1,8 @@
 import os
 from config import *
-from os.path import expanduser
+from os.path import expanduser, isfile
 
 path = os.path.expanduser(notes_path)
-
 
 def show():
     os.system('clear')
