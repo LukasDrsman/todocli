@@ -9,3 +9,6 @@ notes_path = "~/todocli/notes.todolist"
 
 # title of todo-list
 title = "TODO"
+
+# prompt
+prompt = "▶ "

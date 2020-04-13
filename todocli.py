@@ -9,7 +9,7 @@ if(os.path.isfile(path) != True):
 show()
 
 while (1):
-    usrInput = input("▶ ")
+    usrInput = input(prompt)
     if (" " in usrInput):
         command, parameter = usrInput.split(' ', 1)
     else:
