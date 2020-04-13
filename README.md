@@ -18,14 +18,14 @@ python3 main.py
 <br/><br/>
 Commands:
 ```
-help / h  - shows manual
-new / n  - adds new TODO line
-read / r  - prints all TODO lines
-show / s  - clears screen and prints all TODO lines
-delete / del  - clears TODO list
-uncheck / uc  - unchecks TODO line
-check / cc  - checks TODO line
-quit / q  - exits program
+help    |   h       - shows manual
+new     |   n       - adds new TODO line
+read    |   r       - prints all TODO lines
+show    |   s       - clears screen and prints all TODO lines
+delete  |   del     - clears TODO list
+uncheck |   uc      - unchecks TODO line
+check   |   cc      - checks TODO line
+quit    |   q       - exits program
 ```
 <br>
 
