@@ -3,9 +3,9 @@ Simple, CLI based TODO list, written in python.<br/>
 <br/>
 ## Usage
 Required for running todocli: python3 os, os.path, sys, bash, linux or macOS (wasn't tested on macOS) <br/> <br/>
-Download and run (using terminal, in home-dir(~)): 
+Download and run:
 ```
-git clone https://github.com/LukyIsHere/todocli
+git clone https://github.com/LukyIsHere/todocli.git
 cd todocli
 python3 main.py
 ```
@@ -21,22 +21,10 @@ Commands:<br/>
  quit / q  - exits program<br/>
 <br>
 
-## Configuration
-Basic configurations ('config.py'):
-
-```
-unfinished = "insert_unchecked_symbol_here"
-finished = "insert_checked_symbol_here"
-notes_path = "insert_notes_path_here"
-hlp_path = "insert_help_path_here"
-title = "insert_title_of_TODOlist_here"
-```
-<br/>
 
 ## Things to be done
-* single-line deletion
+* single task deletion
 * further configuration options
 * more efficient code
 * cleaner code
-* marking options for sepcial items
-
+* marking options for special items
