@@ -15,7 +15,7 @@ git clone https://github.com/LukyIsHere/todocli.git
 cd todocli
 python3 main.py
 ```
-<br/>
+<br/><br/>
 Commands:
 ```
 help / h  - shows manual
