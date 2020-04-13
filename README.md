@@ -15,8 +15,7 @@ git clone https://github.com/LukyIsHere/todocli.git
 cd todocli
 ./todocli.py
 
-or if that doesn't work
-
+# if that doesn't work:
 sudo chmod +x todocli.py
 ./todocli
 ```
