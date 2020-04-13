@@ -1,5 +1,5 @@
 unfinished = "□"
 finished = "■"
-notes_path = "~/todocli/notes.txt"
-hlp_path = "~/todocli/help.txt"
+notes_path = "~/Projects/todocli/notes.txt"
+hlp_path = "~/Projects/todocli/help.txt"
 title = "TODO"
