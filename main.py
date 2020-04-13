@@ -81,7 +81,7 @@ def read_help():
 
 
 while (1):
-    usrInput = input("~ ")
+    usrInput = input("▶ ")
     if (" " in usrInput):
         command, parameter = usrInput.split(' ')
     else:
@@ -94,6 +94,8 @@ while (1):
     if (command == "uncheck" or command == "uc"):
         uncheck(parameter)
     if (command == "quit" or command == "q"):
+        exit()
+    if (command == "exit" or command == "x"):
         exit()
     if (command == "delete" or command == "del"):
         delete()
