@@ -7,7 +7,6 @@ if(os.path.isfile(path) != True):
     notes.close()
 
 show()
-
 while (1):
     usrInput = input(prompt)
     if (" " in usrInput):
