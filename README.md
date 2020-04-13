@@ -17,7 +17,7 @@ cd todocli
 
 # if that doesn't work:
 sudo chmod +x todocli.py
-./todocli
+./todocli.py
 ```
 <br/><br/>
 Commands:
