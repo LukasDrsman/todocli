@@ -27,6 +27,7 @@ clear   |   l       - clears TODO list
 uncheck |   uc      - unchecks TODO line
 check   |   cc      - checks TODO line
 quit    |   q       - exits program
+exit    |   x       - exits program
 ```
 <br>
 
