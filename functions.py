@@ -5,7 +5,7 @@ from os.path import expanduser, isfile
 path = os.path.expanduser(notes_path)
 
 def show():
-    os.system('clear')
+    print("\033c", end="")
     data = open(path, "r")
     print(data.read())
     data.close()
