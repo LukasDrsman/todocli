@@ -39,28 +39,38 @@ def save(todo, path):
 # add '1' flag (done) to a task
 def check(todo, n):
     try:
-        notenum = int(n) - 1
+        tasknum = int(n) - 1
     except:
-        notenum = len(todo) + 1
+        tasknum = len(todo) + 1
     try:
-        todo[notenum][1] = "1"
+        todo[tasknum][1] = "1"
     except:
         pass
 
 # add '0' flag (not done) to a task
 def uncheck(todo, n):
     try:
-        notenum = int(n) - 1
+        tasknum = int(n) - 1
     except:
-        notenum = len(todo) + 1
+        tasknum = len(todo) + 1
     try:
-        todo[notenum][1] = "0"
+        todo[tasknum][1] = "0"
     except:
         pass
 
 # create new task (in todolist python list)
 def new(todo, note):
     todo.append([note, "0"])
+
+def remove(todo, n):
+        try:
+            tasknum = int(n) - 1
+        except:
+            tasknum = len(todo) + 1
+        try:
+            todo.pop(tasknum)
+        except:
+            pass
 
 # clear the todolist file
 def delete():
