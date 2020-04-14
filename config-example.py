@@ -8,7 +8,11 @@ finished = "■"
 notes_path = "~/todocli/notes.todolist"
 
 # title of todo-list
+showtitle = True
 title = "TODO"
 
 # prompt
 prompt = "▶ "
+
+# save changes on exit
+writeonexit = True

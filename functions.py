@@ -2,58 +2,70 @@ import os
 from config import *
 from os.path import expanduser, isfile
 
+# path to name_of_todolist.todolist (defined in config.py)
 path = os.path.expanduser(notes_path)
 
-def show():
+# load todolist to python list
+def load(path):
+    list = []
+    file = open(path, 'r')
+    lines = file.readlines()
+    for i in range(len(lines)):
+        note, state = (lines[i].rstrip("\n")).split("|")
+        list.append([note, state])
+    return list
+
+# print todolist from python list
+def show(todo):
     print("\033c", end="")
-    data = open(path, "r")
-    print(data.read())
-    data.close()
+    if(showtitle == True):
+        print(title)
+    for i in range(len(todo)):
+        if(todo[i][1] == "0"):
+            print(unfinished+" "+todo[i][0])
+        if(todo[i][1] == "1"):
+            print(finished+" "+todo[i][0])
+    print(" ")
 
-def replace_line(file_name, line_num, text):
-    lines = open(file_name, 'r').readlines()
-    lines[line_num] = text
-    out = open(file_name, 'w')
-    out.writelines(lines)
-    out.close()
+# save changes to todolist file
+def save(todo, path):
+    file = open(path, 'w')
+    file.write("")
+    file.close()
+    file = open(path, 'a')
+    for i in range(len(todo)):
+        file.write(todo[i][0]+"|"+todo[i][1]+"\n")
 
-def check(i):
-    ln = int(i)
-    f = open(path, "r")
-    lines = f.readlines()
-    f.close()
-    swap = lines[ln]
-    cchar = list(swap)
-    cchar[1] = finished
-    joined = "".join(cchar)
-    prntable = str(joined)
-    print(prntable)
-    replace_line(path, ln, prntable)
+# add '1' flag (done) to a task
+def check(todo, n):
+    try:
+        notenum = int(n) - 1
+    except:
+        notenum = len(todo) + 1
+    try:
+        todo[notenum][1] = "1"
+    except:
+        pass
 
-def uncheck(i):
-    ln = int(i)
-    f = open(path, "r")
-    lines = f.readlines()
-    f.close()
-    swap = lines[ln]
-    cchar = list(swap)
-    cchar[1] = unfinished
-    joined = "".join(cchar)
-    prntable = str(joined)
-    print(prntable)
-    replace_line(path, ln, prntable)
+# add '0' flag (not done) to a task
+def uncheck(todo, n):
+    try:
+        notenum = int(n) - 1
+    except:
+        notenum = len(todo) + 1
+    try:
+        todo[notenum][1] = "0"
+    except:
+        pass
 
-def new(newin):
-    notes = open(path, "a")
-    newnote = " "+unfinished+" "+newin
-    notes.write(newnote+"\n")
-    notes.close()
+# create new task (in todolist python list)
+def new(todo, note):
+    todo.append([note, "0"])
 
-
+# clear the todolist file
 def delete():
-    yon = input("Do you want to delete current TODO list? ([y]es or [n]o) ")
-    if (yon == "y" or yon == "Y" or yon == "yes"):
-        notes = open(path, "w")
-        notes.write("")
-        notes.write(title + "\n")
-        notes.close()
+    consent = input("Are you sure yu want to clear your todolist?\n([y]es or [n]o) "+prompt)
+    if (consent == "y" or consent == "Y" or consent == "yes"):
+        file = open(path, "w")
+        file.write("")
+        file.close()

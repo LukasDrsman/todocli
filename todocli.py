@@ -1,34 +1,49 @@
 #!/usr/bin/python3
 from functions import *
 
+# init
 if(os.path.isfile(path) != True):
     notes = open(path, "w")
-    notes.write(title + "\n")
     notes.close()
 
-show()
-while (1):
+todolist = load(path)
+show(todolist)
+
+# main loop
+while(1):
     usrInput = input(prompt)
-    if (" " in usrInput):
+    if(" " in usrInput):
         command, parameter = usrInput.split(' ', 1)
     else:
         command = usrInput
         parameter = ""
-    if (command == "new" or command == "n"):
-        new(parameter)
-        show()
-    if (command == "check" or command == "cc"):
-        check(parameter)
-        show()
-    if (command == "uncheck" or command == "uc"):
-        uncheck(parameter)
-        show()
-    if (command == "quit" or command == "q"):
+
+    if(command == "new" or command == "n"):
+        new(todolist, parameter)
+        show(todolist)
+
+    elif(command == "write" or command == "w"):
+        save(todolist, path)
+
+    elif(command == "load" or command == "l"):
+        todolist = load(path)
+        show(todolist)
+
+    elif(command == "check" or command == "cc"):
+        check(todolist, parameter)
+        show(todolist)
+
+    elif(command == "uncheck" or command == "uc"):
+        uncheck(todolist, parameter)
+        show(todolist)
+
+    elif(command == "quit" or command == "q" or command == "exit" or command == "x"):
+        if(writeonexit == True):
+            save(todolist, path)
         print("\033c", end="")
         exit()
-    if (command == "exit" or command == "x"):
-        print("\033c", end="")
-        exit()
-    if (command == "clear" or command == "l"):
+
+    elif(command == "clear" or command == "cl"):
         delete()
-        show()
+        todolist = load(path)
+        show(todolist)
