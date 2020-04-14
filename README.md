@@ -22,7 +22,7 @@ sudo chmod +x todocli.py
 <br/><br/>
 Commands:
 ```
-new     |   n       - creates new todo task
+new     |   n       - creates new task
 clear   |   cl      - clears todolist
 uncheck |   uc      - unchecks task
 check   |   cc      - checks task
