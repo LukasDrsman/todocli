@@ -22,10 +22,11 @@ sudo chmod +x todocli.py
 <br/><br/>
 Commands:
 ```
-new     |   n       - adds new TODO line
-clear   |   l       - clears TODO list
-uncheck |   uc      - unchecks TODO line
-check   |   cc      - checks TODO line
+new     |   n       - creates new todo task
+clear   |   cl      - clears todolist
+uncheck |   uc      - unchecks task
+check   |   cc      - checks task
+write   |   w       - saves todolist
 quit    |   q       - exits program
 exit    |   x       - exits program
 ```
@@ -35,6 +36,4 @@ exit    |   x       - exits program
 ## Things to be done
 * single task deletion
 * further configuration options
-* more efficient code
-* cleaner code
 * marking options for special items

@@ -20,22 +20,16 @@ while(1):
 
     if(command == "new" or command == "n"):
         new(todolist, parameter)
-        show(todolist)
 
     elif(command == "write" or command == "w"):
         save(todolist, path)
-
-    elif(command == "load" or command == "l"):
         todolist = load(path)
-        show(todolist)
 
     elif(command == "check" or command == "cc"):
         check(todolist, parameter)
-        show(todolist)
 
     elif(command == "uncheck" or command == "uc"):
         uncheck(todolist, parameter)
-        show(todolist)
 
     elif(command == "quit" or command == "q" or command == "exit" or command == "x"):
         if(writeonexit == True):
@@ -46,4 +40,5 @@ while(1):
     elif(command == "clear" or command == "cl"):
         delete()
         todolist = load(path)
-        show(todolist)
+        
+    show(todolist)
