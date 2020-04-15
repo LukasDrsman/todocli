@@ -1,9 +1,11 @@
 # change name from config-example.py to config.py
 
-# task state visualizers
-unfinished = "□"
-finished = "■"
-
+# task state visualizers (flags)
+flags = [
+    (("cc", "check"), ("■", "1")),
+    (("uc", "uncheck"), ("□", "0")),
+    (("i", "important"), ("●", "2"))
+        ]
 # path to notes file
 notes_path = "~/todocli/notes.todolist"
 

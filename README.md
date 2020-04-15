@@ -34,6 +34,4 @@ exit    |   x       - exits program
 
 
 ## Things to be done
-* more configuration options
-* marking options for special items
 * multiple todolists

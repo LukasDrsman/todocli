@@ -25,12 +25,6 @@ while(1):
         save(todolist, path)
         todolist = load(path)
 
-    elif(command == "check" or command == "cc"):
-        check(todolist, parameter)
-
-    elif(command == "uncheck" or command == "uc"):
-        uncheck(todolist, parameter)
-
     elif(command == "remove" or command == "rm"):
         remove(todolist, parameter)
 
@@ -43,5 +37,8 @@ while(1):
     elif(command == "clear" or command == "cl"):
         delete()
         todolist = load(path)
+
+    else:
+        change_flag(todolist, command, parameter)
 
     show(todolist)

@@ -5,6 +5,18 @@ from os.path import expanduser, isfile
 # path to name_of_todolist.todolist (defined in config.py)
 path = os.path.expanduser(notes_path)
 
+def change_flag(todo, command, n):
+    try:
+        tasknum = int(n) - 1
+    except:
+        tasknum = len(todo) + 1
+    for i in range(len(flags)):
+        if(flags[i][0][0] == command or flags[i][0][1] == command):
+            try:
+                todo[tasknum][1] = flags[i][1][1]
+            except:
+                pass
+
 # load todolist to python list
 def load(path):
     list = []
@@ -21,10 +33,10 @@ def show(todo):
     if(showtitle == True):
         print(title)
     for i in range(len(todo)):
-        if(todo[i][1] == "0"):
-            print(unfinished+" "+todo[i][0])
-        if(todo[i][1] == "1"):
-            print(finished+" "+todo[i][0])
+        for y in range(len(flags)):
+            if(flags[y][1][1] == todo[i][1]):
+                print(flags[y][1][0]+" "+todo[i][0])
+                break
     print(" ")
 
 # save changes to todolist file
