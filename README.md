@@ -25,11 +25,14 @@ Commands:
 new     |   n       - creates new task
 clear   |   cl      - clears todolist
 remove  |   rm      - removes task
-uncheck |   uc      - unchecks task
-check   |   cc      - checks task
 write   |   w       - saves todolist
 quit    |   q       - exits program
 exit    |   x       - exits program
+
+# default task state changing commands
+uncheck   |   uc      - marks task as not done
+check     |   cc      - marks task as done
+important |   i       - marks task as important
 ```
 <br>
 
