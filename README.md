@@ -1,5 +1,6 @@
 # todocli
 Minimal cli text-based todolist manager written in python.<br/>
+![showcase](https://github.com/LukasDrsman/todocli/blob/master/showcase.gif)
 <br/>
 ## Usage
 Requirements:
