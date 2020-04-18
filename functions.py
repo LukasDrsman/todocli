@@ -48,28 +48,6 @@ def save(todo, path):
     for i in range(len(todo)):
         file.write(todo[i][0]+"|"+todo[i][1]+"\n")
 
-# add '1' flag (done) to a task
-def check(todo, n):
-    try:
-        tasknum = int(n) - 1
-    except:
-        tasknum = len(todo) + 1
-    try:
-        todo[tasknum][1] = "1"
-    except:
-        pass
-
-# add '0' flag (not done) to a task
-def uncheck(todo, n):
-    try:
-        tasknum = int(n) - 1
-    except:
-        tasknum = len(todo) + 1
-    try:
-        todo[tasknum][1] = "0"
-    except:
-        pass
-
 # create new task (in todolist python list)
 def new(todo, note):
     todo.append([note, "0"])
