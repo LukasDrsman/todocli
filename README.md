@@ -1,6 +1,6 @@
 # todocli
 Minimal cli text-based todolist manager written in python.<br/>
-![showcase](https://github.com/LukasDrsman/todocli/blob/master/showcase.gif)
+![preview](https://github.com/LukasDrsman/todocli/blob/master/preview.png)
 <br/>
 ## Usage
 Requirements:
@@ -23,16 +23,16 @@ sudo chmod +x todocli.py
 <br/><br/>
 Commands:
 ```
-new     |   n       - creates new task
-clear   |   cl      - clears todolist
-remove  |   rm      - removes task
-write   |   w       - saves todolist
-quit    |   q       - exits program
-exit    |   x       - exits program
-
-# default task state changing commands
+new       |   n       - creates new task
+clear     |   cl      - clears todolist
+remove    |   rm      - removes task
+write     |   w       - saves todolist
+quit      |   q       - exits program
+exit      |   x       - exits program
 uncheck   |   uc      - marks task as not done
 check     |   cc      - marks task as done
+date      |   d       - sets deadline
+
 important |   i       - marks task as important
 ```
 <br>

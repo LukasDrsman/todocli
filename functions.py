@@ -1,9 +1,17 @@
 import os
 from config import *
 from os.path import expanduser, isfile
+from datetime import datetime
+
+END = '\033[0m'
+todate = datetime.today()
 
 # path to name_of_todolist.todolist (defined in config.py)
 path = os.path.expanduser(notes_path)
+
+# default task state flags
+flags.append((("cc", "check"), ("■", "1"), (GREY, True)))
+flags.append((("uc", "uncheck"), ("□", "0"), (NONE, False)))
 
 def change_flag(todo, command, n):
     try:
@@ -23,8 +31,13 @@ def load(path):
     file = open(path, 'r')
     lines = file.readlines()
     for i in range(len(lines)):
-        note, state = (lines[i].rstrip("\n")).split("|")
-        list.append([note, state])
+        try:
+            task, state, duedate = (lines[i].rstrip("\n")).split("|")
+            due = datetime.strptime(duedate, '%Y-%m-%d')
+            list.append([task, state, due])
+        except:
+            task, state = (lines[i].rstrip("\n")).split("|")
+            list.append([task, state, "none"])
     return list
 
 # print todolist from python list
@@ -35,7 +48,27 @@ def show(todo):
     for i in range(len(todo)):
         for y in range(len(flags)):
             if(flags[y][1][1] == todo[i][1]):
-                print(flags[y][1][0]+" "+todo[i][0])
+                taskinfo = flags[y][1][0]+" "+todo[i][0]
+                if(showdeadline == False):
+                    if(type(todo[i][2]) is datetime):
+                        if(todo[i][2] >= todate):
+                            print(flags[y][2][0]+taskinfo+END)
+                        elif(todo[i][2] < todate and flags[y][2][1] == True):
+                            print(flags[y][2][0]+taskinfo+END)
+                        else:
+                            print(RED+taskinfo+END)
+                    else:
+                        print(flags[y][2][0]+taskinfo+END)
+                if(showdeadline == True):
+                    if(type(todo[i][2]) is datetime):
+                        if(todo[i][2] >= todate):
+                            print(flags[y][2][0]+taskinfo+END+" "+" → "+todo[i][2].strftime('%a %d %b'))
+                        elif(todo[i][2] < todate and flags[y][2][1] == True):
+                            print(flags[y][2][0]+taskinfo+END+" "+" → "+todo[i][2].strftime('%a %d %b'))
+                        else:
+                            print(RED+taskinfo+END+" "+" → "+todo[i][2].strftime('%a %d %b'))
+                    else:
+                        print(flags[y][2][0]+taskinfo+END)
                 break
     print(" ")
 
@@ -46,11 +79,26 @@ def save(todo, path):
     file.close()
     file = open(path, 'a')
     for i in range(len(todo)):
-        file.write(todo[i][0]+"|"+todo[i][1]+"\n")
+        if(type(todo[i][2]) is datetime):
+            file.write(todo[i][0]+"|"+todo[i][1]+"|"+todo[i][2].strftime('%Y-%m-%d')+"\n")
+        else:
+            file.write(todo[i][0]+"|"+todo[i][1]+"\n")
 
 # create new task (in todolist python list)
-def new(todo, note):
-    todo.append([note, "0"])
+def new(todo, task):
+    todo.append([task, "0", "none"])
+
+def cdate(todo, n):
+        try:
+            tasknum = int(n) - 1
+        except:
+            tasknum = len(todo) + 1
+        duedate = input("(Year month day) "+promptcol+prompt+END)
+        try:
+            due = datetime.strptime(duedate, '%Y %m %d')
+        except:
+            due = "none"
+        todo[tasknum][2] = due
 
 def remove(todo, n):
         try:
@@ -64,7 +112,7 @@ def remove(todo, n):
 
 # clear the todolist file
 def delete():
-    consent = input("Are you sure yu want to clear your todolist?\n([y]es or [n]o) "+prompt)
+    consent = input("Are you sure yu want to clear your todolist?\n([y]es or [n]o) "+promptcol+prompt+END)
     if (consent == "y" or consent == "Y" or consent == "yes"):
         file = open(path, "w")
         file.write("")
