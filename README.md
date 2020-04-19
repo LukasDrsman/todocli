@@ -12,7 +12,7 @@ linux (or macOS)
 <br/> <br/>
 Download and run:
 ```
-git clone https://github.com/LukyIsHere/todocli.git
+git clone https://github.com/LukasDrsman/todocli.git
 cd todocli
 ./todocli.py
 
