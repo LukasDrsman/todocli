@@ -13,7 +13,7 @@ Download and install:
 ```
 git clone https://github.com/LukasDrsman/todocli.git
 cd todocli
-# rename config-example.py to config.py
+# rename config-example.py to config.py and change relevant options
 ./build
 todocli
 ```
