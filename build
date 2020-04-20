@@ -8,4 +8,4 @@ else
   sudo sh -c " mkdir /usr/share/todocli; cp $dir/* /usr/share/todocli/ "
 fi
 cd /usr/share/todocli
-sudo sh -c " rm -rf .git; rm preview.png; rm README.md; rm config-example.py; cp $dir/run/todocli /usr/bin"
+sudo sh -c " rm -rf .git; rm preview.png; rm README.md; rm config-example.py; cp $dir/.run/todocli /usr/bin"
