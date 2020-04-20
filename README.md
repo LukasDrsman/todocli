@@ -1,5 +1,4 @@
 # todocli
-Minimal cli text-based todolist manager written in python.<br/>
 ![preview](https://github.com/LukasDrsman/todocli/blob/master/preview.png)
 <br/>
 ## Usage
@@ -10,15 +9,13 @@ sh (or it's alternatives)
 linux (or macOS)
 ```
 <br/> <br/>
-Download and run:
+Download and install:
 ```
 git clone https://github.com/LukyIsHere/todocli.git
 cd todocli
-./todocli.py
-
-# if that doesn't work:
-sudo chmod +x todocli.py
-./todocli.py
+# rename config-example.py to config.py
+./build
+todocli
 ```
 <br/><br/>
 Commands:
