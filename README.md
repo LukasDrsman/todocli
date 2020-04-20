@@ -11,7 +11,7 @@ linux (or macOS)
 <br/> <br/>
 Download and install:
 ```
-git clone https://github.com/LukyIsHere/todocli.git
+git clone https://github.com/LukasDrsman/todocli.git
 cd todocli
 # rename config-example.py to config.py
 ./build
