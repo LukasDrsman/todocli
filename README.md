@@ -20,17 +20,18 @@ todocli
 <br/><br/>
 Commands:
 ```
-new       |   n       - creates new task
-clear     |   cl      - clears todolist
-remove    |   rm      - removes task
-write     |   w       - saves todolist
-quit      |   q       - exits program
-exit      |   x       - exits program
-uncheck   |   uc      - marks task as not done
-check     |   cc      - marks task as done
-date      |   d       - sets deadline
+| long      | short     | description              |
 
-important |   i       - marks task as important
+| new       |   n       | creates new task         |
+| clear     |   cl      | clears todolist          |
+| remove    |   rm      | removes task             |
+| write     |   w       | saves todolist           |
+| quit      |   q       | exits program            |
+| exit      |   x       | exits program            |
+| uncheck   |   uc      | marks task as not done   |
+| check     |   cc      | marks task as done       |
+| date      |   d       | sets deadline            |
+| important |   i       | marks task as important  |
 ```
 <br>
 
