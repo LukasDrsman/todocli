@@ -4,8 +4,8 @@
 ## Usage
 Requirements:
 ```
+sh
 python3
-sh (or it's alternatives)
 linux (or macOS)
 ```
 <br/> <br/>
