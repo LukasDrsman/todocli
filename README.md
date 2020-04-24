@@ -20,7 +20,7 @@ todocli
 <br/><br/>
 Commands:
 ```
-| long      | short     | description              |
+| long:     | short:    | description:             |
 
 | new       |   n       | creates new task         |
 | clear     |   cl      | clears todolist          |

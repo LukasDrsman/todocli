@@ -3,15 +3,9 @@ from config import *
 from os.path import expanduser, isfile
 from datetime import datetime
 
-END = '\033[0m'
 todate = datetime.today()
 
-# path to name_of_todolist.todolist (defined in config.py)
-path = os.path.expanduser(notes_path)
-
-# default task state flags
-flags.append((("cc", "check"), ("■", "1"), (GREY, True)))
-flags.append((("uc", "uncheck"), ("□", "0"), (NONE, False)))
+path = os.path.expanduser(npath)
 
 def change_flag(todo, command, n):
     try:
@@ -25,7 +19,6 @@ def change_flag(todo, command, n):
             except:
                 pass
 
-# load todolist to python list
 def load(path):
     list = []
     file = open(path, 'r')
@@ -40,7 +33,6 @@ def load(path):
             list.append([task, state, "none"])
     return list
 
-# print todolist from python list
 def show(todo):
     print("\033c", end="")
     if(showtitle == True):
@@ -62,17 +54,16 @@ def show(todo):
                 if(showdeadline == True):
                     if(type(todo[i][2]) is datetime):
                         if(todo[i][2] >= todate):
-                            print(flags[y][2][0]+taskinfo+END+" "+" → "+todo[i][2].strftime('%a %d %b'))
+                            print(flags[y][2][0]+taskinfo+END+" "+" → "+todo[i][2].strftime(dateformat))
                         elif(todo[i][2] < todate and flags[y][2][1] == True):
-                            print(flags[y][2][0]+taskinfo+END+" "+" → "+todo[i][2].strftime('%a %d %b'))
+                            print(flags[y][2][0]+taskinfo+END+" "+" → "+todo[i][2].strftime(dateformat))
                         else:
-                            print(RED+taskinfo+END+" "+" → "+todo[i][2].strftime('%a %d %b'))
+                            print(RED+taskinfo+END+" "+" → "+todo[i][2].strftime(dateformat))
                     else:
                         print(flags[y][2][0]+taskinfo+END)
                 break
     print(" ")
 
-# save changes to todolist file
 def save(todo, path):
     file = open(path, 'w')
     file.write("")
@@ -84,9 +75,8 @@ def save(todo, path):
         else:
             file.write(todo[i][0]+"|"+todo[i][1]+"\n")
 
-# create new task (in todolist python list)
 def new(todo, task):
-    todo.append([task, "0", "none"])
+    todo.append([task, deflag, "none"])
 
 def cdate(todo, n):
         try:
@@ -110,9 +100,8 @@ def remove(todo, n):
         except:
             pass
 
-# clear the todolist file
 def delete():
-    consent = input("Are you sure yu want to clear your todolist?\n([y]es or [n]o) "+promptcol+prompt+END)
+    consent = input("Are you sure you want to clear your todolist?\n([y]es or [n]o) "+promptcol+prompt+END)
     if (consent == "y" or consent == "Y" or consent == "yes"):
         file = open(path, "w")
         file.write("")

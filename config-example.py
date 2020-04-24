@@ -13,12 +13,18 @@ GREY   = '\33[90m'
 NONE   = ''
 
 # task state visualizers (flags)
-#syntax: (("command-short", "command"), ("symbol", "code"), (colour-name, overwrite-deadline-colour))
+# syntax: (("command-short", "command"), ("symbol", "code"), (colour-name, overwrite-deadline-colour))
 flags = [
-        (("i", "important"), ("●", "2"), (YELLOW, False))
+        (("i", "important"), ("●", "2"), (YELLOW, False)),
+        (("uc", "uncheck"), ("□", "0"), (NONE, False)),
+        (("cc", "check"), ("■", "1"), (GREY, True))
         ]
+
+# default flag on creation of task
+deflag = "0"
+
 # path to notes file
-notes_path = "~/todocli/notes.todolist"
+npath = "~/todocli/notes.todolist"
 
 # title of todo-list
 showtitle = True
@@ -33,3 +39,6 @@ promptcol = GREEN
 
 # save changes on exit
 writeonexit = True
+
+# deadline date format
+dateformat = "%a %d %b"
