@@ -8,7 +8,7 @@ Requirements:
 * linux (or macOS)
 
 <br/> <br/>
-Download and install:
+Install and run:
 ```sh
 git clone https://github.com/LukasDrsman/todocli.git
 cd todocli
