@@ -23,8 +23,14 @@ flags = [
 # default flag on creation of task
 deflag = "0"
 
-# path to notes file
-npath = "~/todocli/notes.todolist"
+# default path to default todolist
+defpath = "~/todocli/todo.todolist"
+
+# path to folder containing todolists
+defdir = "~/todocli/"
+
+# list all todolist files when selecting todolist file
+listtodos = True
 
 # title of todo-list
 showtitle = True

@@ -3,11 +3,11 @@ from config import *
 from os.path import expanduser, isfile
 from datetime import datetime
 
-# TODO: multiple todolists
+# TODO: task descriptions
 
 todate = datetime.today()
-
-path = os.path.expanduser(npath)
+path = os.path.expanduser(defpath)
+ddir = os.path.expanduser(defdir)
 
 def change_flag(todo, command, n):
     try:
@@ -23,7 +23,9 @@ def change_flag(todo, command, n):
 
 def load(path):
     list = []
-    file = open(path, 'r')
+    file = open(path, 'r+')
+    pretitle, mess = str(os.path.basename(file.name)).split(".")
+    title = pretitle+": "
     lines = file.readlines()
     for i in range(len(lines)):
         try:
@@ -33,9 +35,9 @@ def load(path):
         except:
             task, state  = (lines[i].rstrip("\n")).split("|")
             list.append([task, state, "none"])
-    return list
+    return list, title
 
-def show(todo):
+def show(todo, title):
     print("\033c", end="")
     if(showtitle == True):
         print(title)

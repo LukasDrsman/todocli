@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 from functions import *
+from time import sleep
 
 # init
 if(os.path.isfile(path) != True):
     notes = open(path, "w")
     notes.close()
-
-todolist = load(path)
-show(todolist)
+todolist, title = load(path)
+show(todolist, title)
 
 # main loop
 while(1):
@@ -36,7 +36,29 @@ while(1):
 
     elif(command == "clear" or command == "cl"):
         delete()
-        todolist = load(path)
+        todolist, title = load(path)
+
+    elif(command == "load" or command == "l"):
+        if(writeonexit == True):
+            save(todolist, path)
+        if(listtodos == True):
+            todos = os.listdir(ddir)
+            for i in range(len(todos)):
+                print(" "+"["+str(i)+"]"+" "+(todos[i].split("."))[0])
+        selection = input("number or name "+promptcol+prompt+END)
+        try:
+            selection = int(selection)
+            try:
+                path = ddir+todos[selection]
+                todolist, title = load(path)
+            except:
+                todolist, title = load(path)
+        except:
+            path = ddir+selection+".todolist"
+            if(os.path.isfile(path) != True):
+                notes = open(path, "w")
+                notes.close()
+            todolist, title = load(path)
 
     elif(command == "date" or command == "d"):
         cdate(todolist, parameter)
@@ -44,4 +66,4 @@ while(1):
     else:
         change_flag(todolist, command, parameter)
 
-    show(todolist)
+    show(todolist, title)
