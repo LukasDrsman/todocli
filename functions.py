@@ -3,6 +3,11 @@ from config import *
 from os.path import expanduser, isfile
 from datetime import datetime
 
+# TODO: fix some quirks
+# TODO: handle most exceptions
+# TODO: add child tasks
+# TODO: add separate dates for child tasks
+
 todate = datetime.today()
 
 path = os.path.expanduser(npath)
