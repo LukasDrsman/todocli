@@ -4,9 +4,7 @@ from os.path import expanduser, isfile
 from datetime import datetime
 
 # TODO: fix some quirks
-# TODO: handle most exceptions
-# TODO: add child tasks
-# TODO: add separate dates for child tasks
+# TODO: handle exceptions
 
 todate = datetime.today()
 
@@ -34,7 +32,7 @@ def load(path):
             due = datetime.strptime(duedate, '%Y-%m-%d')
             list.append([task, state, due])
         except:
-            task, state = (lines[i].rstrip("\n")).split("|")
+            task, state  = (lines[i].rstrip("\n")).split("|")
             list.append([task, state, "none"])
     return list
 
