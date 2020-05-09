@@ -24,6 +24,7 @@ Commands:
 |new       |n       |creates new task         |
 |clear     |cl      |clears todolist          |
 |remove    |rm      |removes task             |
+|load      |l       |loads different todolist |
 |write     |w       |saves todolist           |
 |quit      |q       |exits program            |
 |exit      |x       |exits program            |
