@@ -5,6 +5,7 @@ from datetime import datetime
 
 # TODO: fix some quirks
 # TODO: handle exceptions
+# TODO: multiple todolists
 
 todate = datetime.today()
 
