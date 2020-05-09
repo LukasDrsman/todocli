@@ -3,14 +3,13 @@
 <br/>
 ## Usage
 Requirements:
-```
-sh
-python3
-linux (or macOS)
-```
+* sh
+* python3
+* linux (or macOS)
+
 <br/> <br/>
 Download and install:
-```
+```sh
 git clone https://github.com/LukasDrsman/todocli.git
 cd todocli
 # rename config-example.py to config.py and change relevant options
@@ -34,7 +33,3 @@ Commands:
 |important |i       |marks task as important  |
 
 <br>
-
-
-## Things to be done
-* multiple todolists
