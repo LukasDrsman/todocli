@@ -18,18 +18,18 @@ todocli
 ```
 <br/><br/>
 Commands:
-| long        | short           | description  |
-| ------------- |:-------------:| -----|
-|new       |n       |creates new task         |
-|clear     |cl      |clears todolist          |
-|remove    |rm      |removes task             |
-|load      |l       |loads different todolist |
-|write     |w       |saves todolist           |
-|quit      |q       |exits program            |
-|exit      |x       |exits program            |
-|uncheck   |uc      |marks task as not done   |
-|check     |cc      |marks task as done       |
-|date      |d       |sets deadline            |
-|important |i       |marks task as important  |
+| long        | short           | description  | argument |
+| ------------- |:-------------:| -----|-----------:|
+|new       |n       |creates new task         |text|
+|clear     |cl      |clears todolist          |none|
+|remove    |rm      |removes task             |task number|
+|load      |l       |loads different todolist |none|
+|write     |w       |saves todolist           |none|
+|quit      |q       |exits program            |none|
+|exit      |x       |exits program            |none|
+|uncheck   |uc      |marks task as not done   |task number|
+|check     |cc      |marks task as done       |task number|
+|date      |d       |sets deadline            |task number|
+|important |i       |marks task as important  |task number|
 
 <br>
