@@ -35,7 +35,7 @@ while(1):
         exit()
 
     elif(command == "clear" or command == "cl"):
-        delete()
+        clear(path)
         todolist, title = load(path)
 
     elif(command == "load" or command == "l"):
@@ -61,7 +61,7 @@ while(1):
             todolist, title = load(path)
 
     elif(command == "date" or command == "d"):
-        cdate(todolist, parameter)
+        change_date(todolist, parameter)
 
     else:
         change_flag(todolist, command, parameter)

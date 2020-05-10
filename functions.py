@@ -82,7 +82,7 @@ def save(todo, path):
 def new(todo, task):
     todo.append([task, deflag, "none"])
 
-def cdate(todo, n):
+def change_date(todo, n):
         try:
             tasknum = int(n) - 1
         except:
@@ -104,7 +104,7 @@ def remove(todo, n):
         except:
             pass
 
-def delete():
+def clear(path):
     consent = input("Are you sure you want to clear your todolist?\n([y]es or [n]o) "+promptcol+prompt+END)
     if (consent == "y" or consent == "Y" or consent == "yes"):
         file = open(path, "w")
