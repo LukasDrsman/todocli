@@ -106,7 +106,7 @@ def remove(todo, n):
 
 def clear(path):
     consent = input("Are you sure you want to clear your todolist?\n([y]es or [n]o) "+promptcol+prompt+END)
-    if (consent == "y" or consent == "Y" or consent == "yes"):
+    if (consent == "y" or consent == "Y" or consent == "yes" or consent == "Yes" or consent == "YES"):
         file = open(path, "w")
         file.write("")
         file.close()
