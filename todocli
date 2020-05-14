@@ -23,7 +23,7 @@ while(1):
 
     elif(command == "write" or command == "w"):
         save(todolist, path)
-        todolist = load(path)
+        todolist, title = load(path)
 
     elif(command == "remove" or command == "rm"):
         remove(todolist, parameter)
