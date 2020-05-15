@@ -5,7 +5,6 @@
 #### Requirements:
 * python3
 
-<br/> <br/>
 #### Install and run:
 ```sh
 git clone https://github.com/LukasDrsman/todocli.git
@@ -14,7 +13,7 @@ cd todocli
 ./build
 todocli
 ```
-<br/><br/>
+
 #### Commands:
 | long        | short           | description  | argument |
 | ------------- |:-------------:| -----|-----------:|
