@@ -34,7 +34,6 @@ listtodos = True
 
 # title of todo-list
 showtitle = True
-title = "TODO"
 
 # show deadline of task
 showdeadline = True
@@ -48,3 +47,6 @@ writeonexit = True
 
 # deadline date format
 dateformat = "%a %d %b"
+
+# use this year
+thisyear = False
