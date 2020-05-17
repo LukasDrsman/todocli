@@ -14,6 +14,9 @@ cd todocli
 todocli
 ```
 ## Usage
+```
+▶ [short or long] [argument] 
+```
 | long        | short           | description  | argument |
 | ------------- |:-------------:| -----|-----------:|
 |new       |n       |creates new task         |text|
