@@ -2,10 +2,10 @@
 ![preview](https://github.com/LukasDrsman/todocli/blob/master/preview.png)
 <br/>
 ## Installation
-Requirements:
+#### Requirements:
 * python3
 
-Install and run:
+#### Install and run:
 ```sh
 git clone https://github.com/LukasDrsman/todocli.git
 cd todocli
