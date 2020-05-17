@@ -9,7 +9,7 @@
 ```sh
 git clone https://github.com/LukasDrsman/todocli.git
 cd todocli
-# rename config-example.py to config.py and change relevant options
+# edit and rename config-example.py to config.py
 ./build
 todocli
 ```
