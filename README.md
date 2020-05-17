@@ -1,11 +1,11 @@
 # todocli
 ![preview](https://github.com/LukasDrsman/todocli/blob/master/preview.png)
 <br/>
-## Usage
-#### Requirements:
+## Installation
+Requirements:
 * python3
 
-#### Install and run:
+Install and run:
 ```sh
 git clone https://github.com/LukasDrsman/todocli.git
 cd todocli
@@ -13,8 +13,7 @@ cd todocli
 ./build
 todocli
 ```
-
-#### Commands:
+## Usage
 | long        | short           | description  | argument |
 | ------------- |:-------------:| -----|-----------:|
 |new       |n       |creates new task         |text|
