@@ -33,7 +33,7 @@ def load(path):
     for i in range(len(lines)):
         try:
             task, state, duedate = (lines[i].rstrip("\n")).split("|")
-            due = datetime.strptime(duedate, '%Y-%m-%d-%H-%M')
+            due = datetime.strptime(duedate, '%Y-%m-%d')
             list.append([task, state, due])
         except:
             task, state  = (lines[i].rstrip("\n")).split("|")
@@ -78,7 +78,7 @@ def save(todo, path):
     file = open(path, 'a')
     for i in range(len(todo)):
         if(type(todo[i][2]) is datetime):
-            file.write(todo[i][0]+"|"+todo[i][1]+"|"+todo[i][2].strftime('%Y-%m-%d-%H-%M')+"\n")
+            file.write(todo[i][0]+"|"+todo[i][1]+"|"+todo[i][2].strftime('%Y-%m-%d')+"\n")
         else:
             file.write(todo[i][0]+"|"+todo[i][1]+"\n")
 
