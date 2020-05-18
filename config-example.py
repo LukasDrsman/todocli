@@ -11,6 +11,7 @@ BEIGE  = '\33[36m'
 WHITE  = '\33[37m'
 GREY   = '\33[90m'
 NONE   = ''
+END    = '\033[0m'
 
 # task state visualizers (flags)
 # syntax: (("command-short", "command"), ("symbol", "code"), (colour-name, overwrite-deadline-colour))
