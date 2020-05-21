@@ -30,7 +30,20 @@ todocli
 |check     |cc      |marks task as done       |task number|
 |date      |d       |sets deadline            |task number|
 |important |i       |marks task as important  |task number|
-|sort      |s       |sorts tasks              |sorting parameters|
+|sort      |s       |sorts todolist           |sorting parameters|
 
+#### Sorting:
+```
+▶ s [sort by] [order] 
+```
+| sort by (long)| sort by (short) | description  |
+| ------------- |:---------------:| -------------:|
+|date           |d                |sorts by tasks assigned deadline   |
+|priority       |p                |sorts by priority index of tasks' flags  |
+
+| order (long)        | order (short)           | description  |
+| ------------- |:-------------:| ----------------:|
+|highest       |h       |descending order       |
+|lowest        |l       |ascending order        |
 
 <br>
