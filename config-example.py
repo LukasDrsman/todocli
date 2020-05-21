@@ -54,4 +54,4 @@ thisyear = False
 
 # linenumber
 linenum = True
-linenumformat = "%2d) "
+linenumformat = "%2d| "
