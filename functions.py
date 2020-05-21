@@ -120,13 +120,11 @@ def remove(todo, n):
         except:
             pass
 
-def clear(path):
+def clear(todo):
     consent = input("Are you sure you want to clear your todolist?\n([y]es or [n]o) "+promptcol+prompt+END)
     consent.lower()
-    if (consent == "y" or consent == "yes"):
-        file = open(path, "w")
-        file.write("")
-        file.close()
+    if(consent == "y" or consent == "yes"):
+        todo.clear()
 
 def sort_by(todo, sort_type, direction):
     sort_type.lower()

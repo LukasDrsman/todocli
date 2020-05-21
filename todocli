@@ -35,8 +35,7 @@ while(1):
         exit()
 
     elif(command == "clear" or command == "cl"):
-        clear(path)
-        todolist, title = load(path)
+        clear(todolist)
 
     elif(command == "load" or command == "l"):
         if(writeonexit == True):
