@@ -64,7 +64,11 @@ while(1):
         change_date(todolist, parameter)
 
     elif(command == "sort" or command == "s"):
-        sort_type, direction = parameter.split(" ", 1)
+        try:
+            sort_type, direction = parameter.split(" ", 1)
+        except:
+            sort_type = parameter
+            direction = "h"
         sort_by(todolist, sort_type, direction)
 
     else:
