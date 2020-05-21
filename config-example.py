@@ -51,3 +51,7 @@ dateformat = "%a %d %b"
 
 # use this year
 thisyear = False
+
+# linenumber
+linenum = True
+linenumformat = "%2d) "

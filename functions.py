@@ -45,6 +45,9 @@ def show(todo, title):
     if(showtitle == True):
         print(title)
     for i in range(len(todo)):
+        if(linenum == True):
+            num = i + 1
+            print(linenumformat % num, end="")
         for y in range(len(flags)):
             if(flags[y][1][1] == todo[i][1]):
                 taskinfo = flags[y][1][0]+" "+todo[i][0]
@@ -103,7 +106,10 @@ def change_date(todo, n):
                 due = datetime.strptime(year + " " + duedate, '%Y %m %d')
         except:
             due = "none"
-        todo[tasknum][2] = due
+        try:
+            todo[tasknum][2] = due
+        except:
+            pass
 
 def remove(todo, n):
         try:
