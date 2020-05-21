@@ -5,8 +5,7 @@ from datetime import datetime
 
 # TODO: task descriptions
 # TODO: sort:
-# TODO:     sort by datetime
-# TODO:     sort by priority
+# TODO:     smartsort
 
 todate = datetime.today()
 path = os.path.expanduser(defpath)
@@ -123,7 +122,44 @@ def remove(todo, n):
 
 def clear(path):
     consent = input("Are you sure you want to clear your todolist?\n([y]es or [n]o) "+promptcol+prompt+END)
-    if (consent == "y" or consent == "Y" or consent == "yes" or consent == "Yes" or consent == "YES"):
+    consent.lower()
+    if (consent == "y" or consent == "yes"):
         file = open(path, "w")
         file.write("")
         file.close()
+
+def sort_by(todo, sort_type, direction):
+    sort_type.lower()
+    direction.lower()
+    if(sort_type == "date" or sort_type == "d"):
+        wdate = []
+        wodate = []
+        for i in range(len(todo)):
+            if(todo[i][2] != "none"):
+                wdate.append(todo[i])
+            else:
+                wodate.append(todo[i])
+        todo.clear()
+        if(direction == "h" or direction == "highest"):
+            wdate.sort(key=lambda date: date[2], reverse=True)
+        if(direction == "l" or direction == "lowest"):
+            wdate.sort(key=lambda date: date[2])
+        for i in range(len(wdate)):
+            todo.append(wdate[i])
+        for i in range(len(wodate)):
+            todo.append(wodate[i])
+
+    if(sort_type == "priority" or sort_type == "p"):
+        wpriority = []
+        for i in range(len(todo)):
+            for y in range(len(flags)):
+                if(todo[i][1] == flags[y][1][1]):
+                    wpriority.append(todo[i] + [flags[y][3]])
+                    print(wpriority[i])
+        if(direction == "h" or direction == "highest"):
+            wpriority.sort(key=lambda p_index: p_index[3], reverse=True)
+        elif(direction == "l" or direction == "lowest"):
+            wpriority.sort(key=lambda p_index: p_index[3])
+        todo.clear()
+        for i in range(len(wpriority)):
+            todo.append([wpriority[i][0], wpriority[i][1], wpriority[i][2]])

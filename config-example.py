@@ -14,11 +14,11 @@ NONE   = ''
 END    = '\033[0m'
 
 # task state visualizers (flags)
-# syntax: (("command-short", "command"), ("symbol", "code"), (colour-name, overwrite-deadline-colour))
+# syntax: (("command-short", "command"), ("symbol", "code"), (colour-name, overwrite-deadline-colour), priority-index)
 flags = [
-        (("i", "important"), ("●", "2"), (YELLOW, False)),
-        (("uc", "uncheck"), ("□", "0"), (NONE, False)),
-        (("cc", "check"), ("■", "1"), (GREY, True))
+        (("i", "important"), ("●", "2"), (YELLOW, False), 10),
+        (("uc", "uncheck"), ("□", "0"), (NONE, False), 1),
+        (("cc", "check"), ("■", "1"), (GREY, True), -100)
         ]
 
 # default flag on creation of task
