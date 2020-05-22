@@ -1,0 +1,15 @@
+#!/bin/sh
+
+dir=$(pwd)
+echo "Installing todocli..."
+if [ -d "/usr/share/todocli" ]; then
+    cp $dir/*.py /usr/share/todocli/
+    cp $dir/todocli /usr/share/todocli/
+else
+    mkdir /usr/share/todocli; cp $dir/*.py /usr/share/todocli/
+    cp $dir/todocli /usr/share/todocli/
+fi
+cd /usr/share/todocli
+rm -rf .git
+rm config-example.py 
+cp $dir/.run/todocli /usr/bin

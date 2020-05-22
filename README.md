@@ -10,7 +10,7 @@
 git clone https://github.com/LukasDrsman/todocli.git
 cd todocli
 # edit and rename config-example.py to config.py
-./build
+sudo ./install
 todocli
 ```
 ## Usage
