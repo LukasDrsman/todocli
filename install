@@ -2,14 +2,14 @@
 
 dir=$(pwd)
 echo "Installing todocli..."
-if [ -d "/usr/share/todocli" ]; then
-    cp $dir/*.py /usr/share/todocli/
-    cp $dir/todocli /usr/share/todocli/
+if [ -d "/usr/lib/todocli" ]; then
+    cp $dir/*.py /usr/lib/todocli/
+    cp $dir/todocli /usr/lib/todocli/
 else
-    mkdir /usr/share/todocli; cp $dir/*.py /usr/share/todocli/
-    cp $dir/todocli /usr/share/todocli/
+    mkdir /usr/lib/todocli; cp $dir/*.py /usr/lib/todocli/
+    cp $dir/todocli /usr/lib/todocli/
 fi
-cd /usr/share/todocli
+cd /usr/lib/todocli
 rm -rf .git
 rm config-example.py 
 cp $dir/.run/todocli /usr/bin

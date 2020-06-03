@@ -1,2 +1,2 @@
 #!/bin/sh
-/usr/share/todocli/todocli
+/usr/lib/todocli/todocli $*

@@ -2,10 +2,18 @@
 from functions import *
 from time import sleep
 
-# init
+# fetch path to default todolist
+path = os.path.expanduser(defpath)
+
+# fetch path to todolist directory
+ddir = os.path.expanduser(defdir)
+
+# create default todolist if it doesn't exist
 if(os.path.isfile(path) != True):
     notes = open(path, "w")
     notes.close()
+
+# load & render todolist 
 todolist, title = load(path)
 show(todolist, title)
 
