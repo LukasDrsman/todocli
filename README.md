@@ -1,3 +1,4 @@
+This repo is old and unreliable, use ![this one instead](https://github.com/LukasDrsman/tdmcli)
 # todocli
 ![preview](https://github.com/LukasDrsman/todocli/blob/master/preview.png)
 <br/>
